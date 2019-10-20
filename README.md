@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PlaneWar
 基于pygame的一款小游戏
 
@@ -37,3 +38,6 @@ sound文件夹存放游戏音效文件。
 ![1](image2/1.png)
 ![2](image2/2.png)
 ![5](image2/5.png)
+=======
+# PlaneWar
+>>>>>>> 032193616aa633b23375c0e8465493de0bc570eb
