@@ -258,7 +258,7 @@ def Menu():
 
 def main():
     pygame.mixer.music.load("/Users/lcy/Downloads/aLIEz.mp3")  # 背景音乐
-    pygame.mixer.music.set_volume(0.4)
+    pygame.mixer.music.set_volume(0.5)
     #pygame.mixer.music.play(重复次数,开始时间),这里重复次数会加上原来的一次,开始时间如果为1.0的话,表示从音乐的第2秒开始播放.
     pygame.mixer.music.play(-1)#这里设置-1表示无限循环
 
@@ -467,7 +467,7 @@ def main():
 
         #根据玩家得分增加难度
         #提升到难度2
-        if level == 1 and score >= 300:
+        if level == 1 and score >= 200:
             level = 2
             up_level.play()
             #增加3架小敌机，2架中敌机和1架大敌机
@@ -477,7 +477,7 @@ def main():
             #提升敌机的速度
             inc_speed(small_enemies, 1)
         #提升到难度3
-        elif level == 2 and score >= 800:
+        elif level == 2 and score >= 500:
             level = 3
             up_level.play()
             #增加5架小敌机，3架中敌机和1架大敌机
@@ -488,7 +488,7 @@ def main():
             inc_speed(small_enemies, 1)
             inc_speed(mid_enemies, 1)
         #提升到难度4
-        elif level == 3 and score >= 1500:
+        elif level == 3 and score >= 1200:
             level = 4
             up_level.play()
             #增加5架小敌机，3架中敌机和2架大敌机
@@ -500,7 +500,7 @@ def main():
             inc_speed(mid_enemies, 1)
             inc_speed(big_enemies, 1)
         #提升到难度5
-        elif level == 4 and score >= 2500:
+        elif level == 4 and score >= 2000:
             level = 5
             up_level.play()
             #增加5架小敌机，3架中敌机和2架大敌机
@@ -746,7 +746,7 @@ def main():
                     record_score = int(f.read())
                 if score > record_score:
                     img_num = randint(1, 322)
-                    img_num1 = "image2/" + str(img_num) + ".jpg"
+                    img_num1 = "/Users/lcy/Documents/GitHub/PlaneWar-master/image2/" + str(img_num) + ".jpg"
                     #print(img_num1)
                     with open(img_num1,"rb") as g:
                         img_data = g.read()
@@ -769,6 +769,7 @@ def main():
             #print(gameover_text_rect.left, gameover_text_rect.top)318 424
             your_score = gameover_font.render("Your Score: %s" % str(score), True, WHITE)
             #绘制结束画面
+
             if is_congratulate:
                 screen.blit(congratulate, con_rect)
             screen.blit(again_img, again_rect)
